@@ -51,9 +51,6 @@
       text-decoration: underline;
     }
   </style>
-  
-  <!-- Script do VLibras -->
-  <script src="https://vlibras.gov.br/app/vlibras.js"></script>
 </head>
 <body>
 
@@ -78,22 +75,16 @@
     </a>
   </div>
 
-  <!-- Adicionando o botão do VLibras -->
-  <div id="vlibras"></div>
-  
+  <!-- Integração do VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-
-  <script>
-    // Verifica se o script VLibras carregou corretamente
-    window.onload = function() {
-      if (typeof VLibras !== "undefined") {
-        console.log("VLibras carregado com sucesso");
-      } else {
-        console.log("Erro ao carregar VLibras");
-      }
-    };
   </script>
 
 </body>
