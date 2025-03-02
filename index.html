@@ -80,8 +80,20 @@
 
   <!-- Adicionando o botão do VLibras -->
   <div id="vlibras"></div>
+  
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script>
+    // Verifica se o script VLibras carregou corretamente
+    window.onload = function() {
+      if (typeof VLibras !== "undefined") {
+        console.log("VLibras carregado com sucesso");
+      } else {
+        console.log("Erro ao carregar VLibras");
+      }
+    };
   </script>
 
 </body>
